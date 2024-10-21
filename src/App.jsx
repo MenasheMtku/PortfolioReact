@@ -1,28 +1,26 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
-import "./App.css";
-
-import About from "./components/About";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import Welcome from "./components/Welcome";
-import Contact from "./components/Contact";
+import React from "react";
+// Components
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar";
+// components
+import About from "./components/About";
+import Contact from "./components/Contact/Contact";
+import Projects from "./components/Projects";
+import Hero from "./components/Hero";
 
-function App() {
-  // const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Welcome />
-      <About />
-      <Projects />
-      <Contact />
+    <>
+      <div className="mx-auto max-w-[var(--max-width)]">
+        <Navbar />
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+      </div>
       <Footer />
-    </div>
+    </>
   );
-}
+};
 
 export default App;

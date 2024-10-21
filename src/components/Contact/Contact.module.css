@@ -1,0 +1,45 @@
+.contactPage {
+  width: clamp(290px, 95%, 768px);
+  align-items: center;
+  padding: 0.8rem 0.8rem;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.contactForm {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  /* border: 1px solid #333; */
+  outline: none;
+  padding: 15px;
+  margin: 12px 0;
+  /* color: #333; */
+  /* background: #eee; */
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+.formGroup textarea {
+  resize: none;
+}
+input:focus,
+textarea:focus,
+button:focus {
+  /* outline: 2px solid #222; */
+  transition: outline 0.1s ease-in;
+}
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  font-weight: 500;
+  /* color: #333; */
+  opacity: 0.7;
+}
+.sendButton {
+  margin-top: 1rem;
+  text-align: center;
+}
