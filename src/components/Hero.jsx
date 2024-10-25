@@ -1,5 +1,5 @@
 import image from "../assets/Arbel.jpeg";
-import Button from "./ui/Button";
+import Button from "./CustomUI/Button";
 
 export default function Hero() {
   return (

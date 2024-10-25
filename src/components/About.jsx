@@ -1,4 +1,4 @@
-import Title from "../components/ui/Title";
+import Title from "../components/CustomUI/Title";
 
 const aboutLI = [
   "I graduate software engineer studies At ORT College in 2020.",

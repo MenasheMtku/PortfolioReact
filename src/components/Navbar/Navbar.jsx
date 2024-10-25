@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
+import React, { useEffect, useState } from "react";
 import { push as Menu } from "react-burger-menu";
-import { IoMoonSharp } from "react-icons/io5";
-import { LuSunMoon } from "react-icons/lu";
-import ThemeToggle from "../ui/ThemeToggle";
+import ThemeToggle from "../CustomUI/ThemeToggle";
 // import styles from "./Navbar.module.css";
 import "./Navbar.css";
 

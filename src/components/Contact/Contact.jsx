@@ -1,7 +1,10 @@
 import { IoSend } from "react-icons/io5";
-import Title from "../../components/ui/Title";
-import Button from "../ui/Button";
-// icons
+import Title from "../../components/CustomUI/Title";
+// import Button from "../CustomUI/Button";
+import { Form } from "../ui/form";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { Button } from "../ui/button";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa";
@@ -49,13 +52,13 @@ export default function Contact() {
             data-netlify-recaptcha="true"
             action="https://api.web3forms.com/submit"
           >
-            <input
+            <Input
               type="hidden"
               name="access_key"
               value="cc4e4606-baba-4acc-a294-aa153b23575e"
             />
 
-            <input
+            <Input
               id="name"
               type="text"
               name="name"
@@ -63,7 +66,7 @@ export default function Contact() {
               className={formInput}
             />
 
-            <input
+            <Input
               id="email"
               type="email"
               name="email"
@@ -72,19 +75,16 @@ export default function Contact() {
               className={formInput}
             />
 
-            <textarea
+            <Textarea
               id="message"
               name="message"
               rows="6"
               placeholder="Write your message..."
               className={formInput + " resize-none"}
-            ></textarea>
+            ></Textarea>
 
             <div className="text-center">
-              <Button
-                type="submit"
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 py-3 font-semibold text-white transition-all duration-300 ease-in-out hover:bg-blue-700 md:w-max"
-              >
+              <Button type="submit">
                 Send
                 <IoSend className="ml-2" />
               </Button>

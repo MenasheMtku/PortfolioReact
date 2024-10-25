@@ -1,11 +1,8 @@
-import Title from "../components/ui/Title";
+import Title from "./CustomUI/Title";
 
-import projects from "../_data/projects";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { FaExternalLinkAlt, FaGithubSquare } from "react-icons/fa";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import Button from "../components/ui/Button";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import projects from "../_data/projects";
 
 export default function Projects() {
   return (

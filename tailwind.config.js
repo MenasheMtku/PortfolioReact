@@ -1,28 +1,62 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: "class",
+  darkMode: ["class", "class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      colors: {
-        // text
-        primary: "hsl(var(--color-primary) / <alpha-value>)",
-        secondary: "hsl(var(--color-secondary) / <alpha-value>)",
-        // background
-        backGround: "hsl(var(--bg-color) / <alpha-value>)",
-        foreGround: "hsl(var(--fg-color) / <alpha-value>)",
-        primary: "hsl(var(--primary-color) / <alpha-value>)",
-        accent: "hsl(var(--accent-color) / <alpha-value>)",
-        nature_1: "hsl(var(--neutral-color-1) / <alpha-value>)",
-        nature_2: "hsl(var(--neutral-color-2) / <alpha-value>)",
-        nature_3: "hsl(var(--neutral-color-3) / <alpha-value>)",
-        // content: "hsl(var(--color-content) / <alpha-value>)",
-        // content_secondary:
-        //   "hsl(var( --color-content-secondary) / <alpha-value>)",
-        // navColor: "hsl(var(--color-nav) / <alpha-value>)",
-        // bkgDarker: "hsl(var(--color-bkg-alt) / <alpha-value>)",
-      },
-    },
+  	extend: {
+  		colors: {
+  			primary: {
+  				DEFAULT: 'hsl(var(--primary))',
+  				foreground: 'hsl(var(--primary-foreground))'
+  			},
+  			secondary: {
+  				DEFAULT: 'hsl(var(--secondary))',
+  				foreground: 'hsl(var(--secondary-foreground))'
+  			},
+  			backGround: 'hsl(var(--bg-color) / <alpha-value>)',
+  			foreGround: 'hsl(var(--fg-color) / <alpha-value>)',
+  			accent: {
+  				DEFAULT: 'hsl(var(--accent))',
+  				foreground: 'hsl(var(--accent-foreground))'
+  			},
+  			nature_1: 'hsl(var(--neutral-color-1) / <alpha-value>)',
+  			nature_2: 'hsl(var(--neutral-color-2) / <alpha-value>)',
+  			nature_3: 'hsl(var(--neutral-color-3) / <alpha-value>)',
+  			background: 'hsl(var(--background))',
+  			foreground: 'hsl(var(--foreground))',
+  			card: {
+  				DEFAULT: 'hsl(var(--card))',
+  				foreground: 'hsl(var(--card-foreground))'
+  			},
+  			popover: {
+  				DEFAULT: 'hsl(var(--popover))',
+  				foreground: 'hsl(var(--popover-foreground))'
+  			},
+  			muted: {
+  				DEFAULT: 'hsl(var(--muted))',
+  				foreground: 'hsl(var(--muted-foreground))'
+  			},
+  			destructive: {
+  				DEFAULT: 'hsl(var(--destructive))',
+  				foreground: 'hsl(var(--destructive-foreground))'
+  			},
+  			border: 'hsl(var(--border))',
+  			input: 'hsl(var(--input))',
+  			ring: 'hsl(var(--ring))',
+  			chart: {
+  				'1': 'hsl(var(--chart-1))',
+  				'2': 'hsl(var(--chart-2))',
+  				'3': 'hsl(var(--chart-3))',
+  				'4': 'hsl(var(--chart-4))',
+  				'5': 'hsl(var(--chart-5))'
+  			}
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		}
+  	}
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
