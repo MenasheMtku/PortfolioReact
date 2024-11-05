@@ -1,5 +1,6 @@
 import Title from "./CustomUI/Title";
-
+import { Card } from "./ui/card";
+import { Button } from "./ui/button";
 import { FaExternalLinkAlt, FaGithubSquare } from "react-icons/fa";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import projects from "../_data/projects";
@@ -13,10 +14,7 @@ export default function Projects() {
         </Title>
         <div className="grid gap-8 px-8 sm:grid-cols-2 md:py-10 lg:grid-cols-3">
           {projects.map((item) => (
-            <div
-              key={item.id}
-              className="transform overflow-hidden rounded-2xl bg-stone-200 shadow-lg dark:bg-stone-500"
-            >
+            <Card key={item.id}>
               <picture>
                 <div className="h-48">
                   <img
@@ -30,25 +28,29 @@ export default function Projects() {
                 <h3 className="mb-2 text-xl font-semibold">{item.title}</h3>
                 <p className="mb-4">{item.description}</p>
                 <div className="flex justify-between">
-                  <a
-                    href={item.siteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex gap-2 rounded-md bg-foreGround p-2 font-semibold text-backGround hover:bg-nature_2"
-                  >
-                    Live <FaExternalLinkAlt size={20} />
-                  </a>
-                  <a
-                    href={item.codeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex gap-2 rounded-md bg-foreGround p-2 font-semibold text-backGround hover:bg-nature_2"
-                  >
-                    Code <FaGithubSquare size={20} />
-                  </a>
+                  <Button>
+                    <a
+                      href={item.siteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex gap-2"
+                    >
+                      Live <FaExternalLinkAlt size={20} />
+                    </a>
+                  </Button>
+                  <Button>
+                    <a
+                      href={item.codeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex gap-4"
+                    >
+                      Code <FaGithubSquare size={20} />
+                    </a>
+                  </Button>
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>

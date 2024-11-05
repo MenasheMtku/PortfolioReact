@@ -74,36 +74,37 @@ const Navbar = () => {
           >
             Hire Me <span className="text-primary/80">.</span>
           </a>
-          <div className="mr-8 bg-none px-4 text-backGround">
-            <ThemeToggle />
+          <div className="inline-flex items-baseline gap-10">
+            <div className="mr-8 bg-none text-backGround">
+              <ThemeToggle />
+            </div>
+            {/* Burger Menu for mobile */}
+            <div className="md:hidden">
+              <Menu
+                right
+                width={"280px"}
+                isOpen={isOpen}
+                onStateChange={handleStateChange}
+                className="bg-accent text-foreGround md:hidden"
+              >
+                {links.map((item) => (
+                  <a
+                    key={item.id}
+                    href={item.href}
+                    className={`menu-item mt-3 w-full p-4 text-[1.4rem] font-semibold text-nature_3 ${
+                      activeLink === item.href.slice(1) ? "text-primary" : ""
+                    }`}
+                    onClick={() => {
+                      setActiveLink(item.href.slice(1));
+                      closeMenu(); // Close menu after selecting link
+                    }}
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </Menu>
+            </div>
           </div>
-          {/* Burger Menu for mobile */}
-          <div className="md:hidden">
-            <Menu
-              right
-              width={"280px"}
-              isOpen={isOpen}
-              onStateChange={handleStateChange}
-              className="bg-accent text-foreGround md:hidden"
-            >
-              {links.map((item) => (
-                <a
-                  key={item.id}
-                  href={item.href}
-                  className={`menu-item mt-3 w-full p-4 text-[1.4rem] font-semibold text-nature_3 ${
-                    activeLink === item.href.slice(1) ? "text-primary" : ""
-                  }`}
-                  onClick={() => {
-                    setActiveLink(item.href.slice(1));
-                    closeMenu(); // Close menu after selecting link
-                  }}
-                >
-                  {item.title}
-                </a>
-              ))}
-            </Menu>
-          </div>
-
           <div
             className={`md:flex md:items-center ${
               isOpen ? "block" : "hidden"

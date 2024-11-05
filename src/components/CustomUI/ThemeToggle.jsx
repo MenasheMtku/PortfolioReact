@@ -16,7 +16,7 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className="rounded-full bg-nature_2 p-2 text-black"
+      className="rounded-full bg-nature_2 p-1 text-black"
       onClick={toggleTheme}
     >
       {theme === "light" ? (

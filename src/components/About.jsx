@@ -1,5 +1,5 @@
 import Title from "../components/CustomUI/Title";
-
+import { Card } from "./ui/card";
 const aboutLI = [
   "I graduate software engineer studies At ORT College in 2020.",
   "I am a frontend web developer with knowledge in HTML, CSS JavaScript",
@@ -43,9 +43,9 @@ export default function About() {
             <p className="mb-6 text-2xl font-semibold">My Stack</p>
             <div className="grid grid-cols-3 gap-4 md:grid-cols-4">
               {skills.map((item) => (
-                <div
+                <Card
                   key={item.title}
-                  className="rounded-lg bg-stone-200 p-4 shadow-xl transition-shadow duration-300 hover:shadow-lg dark:bg-stone-500"
+                  className="bg-slate-200 p-4 text-slate-800"
                 >
                   <img
                     className="mx-auto mb-3 h-12 w-12 grayscale-[70%] duration-200 hover:grayscale-0"
@@ -53,7 +53,7 @@ export default function About() {
                     alt={item.title}
                   />
                   <p className="text-center text-sm">{item.title}</p>
-                </div>
+                </Card>
               ))}
             </div>
           </div>

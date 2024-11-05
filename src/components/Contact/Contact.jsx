@@ -9,8 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa";
 
-const formInput =
-  "w-full rounded-md border border-foreGround p-4 transition-all duration-300 ease-in-out focus:ring-2 focus:ring-blue-500 placeholder:text-foreGround text-[18px] text-black shadow-lg bg-stone-200 dark:bg-stone-600 border-black border-[2px] ";
+const formInput = "p-6";
 
 export default function Contact() {
   return (
@@ -80,7 +79,7 @@ export default function Contact() {
               name="message"
               rows="6"
               placeholder="Write your message..."
-              className={formInput + " resize-none"}
+              className="resize-none pl-6"
             ></Textarea>
 
             <div className="text-center">
